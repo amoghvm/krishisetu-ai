@@ -1,0 +1,1 @@
+"""KrishiSetu AI - Core Package."""

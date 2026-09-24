@@ -1,0 +1,1 @@
+"""KrishiSetu AI - Backend Application Package."""

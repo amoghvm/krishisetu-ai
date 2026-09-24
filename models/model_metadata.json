@@ -1,0 +1,34 @@
+{
+  "best_epoch": 5,
+  "val_loss": 0.0641,
+  "val_accuracy": 0.9799,
+  "timestamp": "2026-09-24T12:06:54.214892+00:00",
+  "hyperparameters": {
+    "epochs": 10,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "device": "cuda"
+  },
+  "architecture": "ResNet18",
+  "num_classes": 38,
+  "weights_file": "resnet18_plantvillage.pt",
+  "input_size": [
+    3,
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  }
+}

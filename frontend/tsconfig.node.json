@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2023",
+    "types": ["node"]
+  }
+}
