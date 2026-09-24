@@ -82,6 +82,23 @@ export default function AnalyzePage() {
       {/* Input Section */}
       {!results && !isLoading && (
         <div className="space-y-6">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 text-sm">
+            <span className="flex items-center gap-1.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-agri-green-600 text-white text-xs font-semibold">1</span>
+              <span className="text-earth-700 font-medium">Upload Leaf</span>
+            </span>
+            <span className="h-px w-8 bg-earth-300" />
+            <span className="flex items-center gap-1.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-agri-green-600 text-white text-xs font-semibold">2</span>
+              <span className="text-earth-700 font-medium">Set Location</span>
+            </span>
+            <span className="h-px w-8 bg-earth-300" />
+            <span className="flex items-center gap-1.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-agri-green-600 text-white text-xs font-semibold">3</span>
+              <span className="text-earth-700 font-medium">Analyze Crop</span>
+            </span>
+          </div>
+
           {/* Image Upload */}
           <div>
             <h2 className="text-lg font-medium text-earth-800 mb-2">Leaf Image</h2>
@@ -106,7 +123,7 @@ export default function AnalyzePage() {
             type="button"
             onClick={handleAnalyze}
             disabled={!canAnalyze}
-            className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${
+            className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-agri-green-500 focus:ring-offset-2 ${
               canAnalyze
                 ? 'bg-agri-green-600 hover:bg-agri-green-700 text-white'
                 : 'bg-earth-200 text-earth-400 cursor-not-allowed'
