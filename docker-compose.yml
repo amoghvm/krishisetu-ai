@@ -1,0 +1,33 @@
+version: '3.8'
+
+# ==============================================================================
+# KrishiSetu AI - Local Development Docker Compose Specification
+# This file provides a reproducible containerized environment for backend services.
+# Used in later development phases (Phase 2+).
+# ==============================================================================
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: krishisetu_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=True
+      - DATABASE_URL=sqlite:///./krishisetu.db
+      - SECRET_KEY=change-this-insecure-key-to-a-random-32-byte-hex-string
+      - WEATHER_PROVIDER=open-meteo
+      - INFERENCE_DEVICE=cpu
+    volumes:
+      - ./backend:/app
+      - ./models:/models:ro
+    networks:
+      - krishisetu_network
+
+networks:
+  krishisetu_network:
+    driver: bridge

@@ -1,0 +1,110 @@
+# ==============================================================================
+# KrishiSetu AI - .gitignore
+# ==============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Web / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+dist/
+.cache/
+
+# Mobile / Expo / React Native
+.expo/
+.expo-shared/
+web-build/
+android/app/build/
+android/.gradle/
+android/app/release/
+ios/build/
+ios/Pods/
+
+# Environment Variables & Secrets (CRITICAL: DO NOT COMMIT REAL CREDENTIALS)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+credentials.json
+
+# Database & Local Storage
+*.sqlite
+*.sqlite3
+*.db
+backend/krishisetu.db
+
+# Machine Learning: Datasets & Model Binaries (CRITICAL: DO NOT COMMIT HEAVY BINARIES)
+# PlantVillage dataset and raw/processed imagery
+data/raw/
+data/processed/
+data/plantvillage/
+data/downloads/
+*.zip
+*.tar.gz
+*.tar
+*.tgz
+
+# Model checkpoint weights and artifacts
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.bin
+models/*.h5
+models/*.safetensors
+ml/checkpoints/
+ml/runs/
+ml/wandb/
+ml/lightning_logs/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratchpads & Logs
+*.log
+scratch/
+logs/
+temp/
+tmp/
